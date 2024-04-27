@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Data Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#search">Search</a></li>
+            <li><a href="#filters">Filters</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Stock Data Dashboard</h1>
+        <section id="overview">
+            <h2>Overview</h2>
+            <p>Welcome to the stock data dashboard. Here, you can explore and analyze stock data.</p>
+        </section>
+
+        <section id="search">
+            <h2>Search</h2>
+            <input type="text" id="searchInput" placeholder="Search stocks...">
+            <button id="searchButton">Search</button>
+        </section>
+
+        <section id="filters">
+            <h2>Filters</h2>
+            <label for="tickerFilter">Filter by Ticker:</label>
+            <select id="tickerFilter">
+                <option value="AAPL">AAPL</option>
+                <option value="GOOG">GOOG</option>
+                <option value="MSFT">MSFT</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <label for="dateRangeFilter">Date Range:</label>
+            <input type="date" id="startDate">
+            <input type="date" id="endDate">
+
+            <button id="applyFilters">Apply Filters</button>
+        </section>
+
+        <section id="stockData"></section>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
