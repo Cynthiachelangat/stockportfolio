@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stock Data Dashboard</title>
+    <title>Stock Analysis and Prediction</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,14 +12,15 @@
             <li><a href="#overview">Overview</a></li>
             <li><a href="#search">Search</a></li>
             <li><a href="#filters">Filters</a></li>
+            <li><a href="#prediction">Prediction</a></li>
         </ul>
     </nav>
 
     <div class="container">
-        <h1>Stock Data Dashboard</h1>
+        <h1>Stock Portfolio Dashboard</h1>
         <section id="overview">
             <h2>Overview</h2>
-            <p>Welcome to the stock data dashboard. Here, you can explore and analyze stock data.</p>
+            <p>Welcome to the stock analysis and prediction dashboard. Here, you can explore historical stock data and make predictions.</p>
         </section>
 
         <section id="search">
@@ -33,9 +34,15 @@
             <label for="tickerFilter">Filter by Ticker:</label>
             <select id="tickerFilter">
                 <option value="AAPL">AAPL</option>
-                <option value="GOOG">GOOG</option>
+                <option value="AMZN">GOOG</option>
+                <option value="CSCO">MSFT</option>
+                <option value="META">MSFT</option>
+                <option value="NFLX">MSFT</option>
+                <option value="TSLA">MSFT</option>
+                <option value="QCOM">MSFT</option>
+                <option value="AMD">MSFT</option>
+                <option value="SBUX">MSFT</option>
                 <option value="MSFT">MSFT</option>
-                <!-- Add more options as needed -->
             </select>
 
             <label for="dateRangeFilter">Date Range:</label>
@@ -43,6 +50,21 @@
             <input type="date" id="endDate">
 
             <button id="applyFilters">Apply Filters</button>
+        </section>
+
+        <section id="prediction">
+            <h2>Stock Prediction</h2>
+            <form action="/predict" method="post">
+                <label for="ticker">Ticker Symbol:</label>
+                <input type="text" id="ticker" name="ticker" required><br><br>
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required><br><br>
+
+                <!-- Add more input fields for other features -->
+
+                <input type="submit" value="Predict">
+            </form>
         </section>
 
         <section id="stockData"></section>
