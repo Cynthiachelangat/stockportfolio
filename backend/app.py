@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, render_template, request, redirect
-import binding
+from .binding import db,StockData,
 import pandas as pd
 import yfinance as yf
 
